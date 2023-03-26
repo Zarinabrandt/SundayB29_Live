@@ -3,7 +3,7 @@ package week7;
 import java.util.Arrays;
 
 public class Countries {
-    public static void main(String[] args) {
+
 
          /*
     Countries [array, String, loops]
