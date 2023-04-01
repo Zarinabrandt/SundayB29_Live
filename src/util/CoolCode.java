@@ -2,31 +2,32 @@ package util;
 
 public class CoolCode {
 
-    public static double convertFromDollar(String currency, double dollar) {
-
-
-        double result = 0;
+    public static double convertFromDollar(String currency, double dollars) {
         switch (currency.toLowerCase().trim()) {
-
             case "euro":
-                result = dollar * 0.91;
-                break;
-            //instead: return dollar * 0.91
+                return dollars * 0.91;
             case "yen":
-                result = dollar * 121.03;
-                break;
+                return dollars * 121.03;
             case "lira":
-                result = dollar * 14.85;
-                break;
+                return dollars * 14.85;
             case "won":
-                result = dollar * 1217.52;
-                break;
+                return dollars * 1_217.52;
             case "rupee":
-                result = dollar * 184.45;
-                break;
+                return dollars * 181.45;
+        }
 
+        return dollars; // the return if none of the case match
+    }
+
+    public static String multiplicationTable(int number) {
+        return multiplicationTable(number, 10);
+    }
+
+    public static String multiplicationTable(int number, int limit) {
+        String result = "";
+        for (int i = 1; i <= limit; i++) {
+            result += "\n" + number + " x " + i + " = " + (number * i);
         }
         return result;
-
     }
 }
