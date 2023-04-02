@@ -1,5 +1,7 @@
 package util;
 
+import java.util.ArrayList;
+
 public class CoolCode {
 
     public static double convertFromDollar(String currency, double dollars) {
@@ -30,4 +32,41 @@ public class CoolCode {
         }
         return result;
     }
+
+
+    //print 2d array
+
+    public static String print2D(int[][] arr){
+        String print = "*";
+        for (int[] inner : arr){
+            print += "\n\t";
+            for (int each : inner){
+
+                print += "(" + each + ")";
+            }
+
+
+        }
+        return print;
+    }
+
+   //converts primitive int array to ArrayList
+    public static ArrayList<Integer> convertArrayToList(int[] arr){
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int each : arr){
+            list.add(each);
+        }
+        return list;
+
+    }
+
+    //convert arrayList to array
+    public static int[] convertListToArr(ArrayList<Integer> list){
+        int[] arr = new int[list.size()];
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = list.get(i);
+        }
+        return arr;
+    }
+
 }
