@@ -3,7 +3,7 @@ package week9_Constructors;
 public class Hobby {
 
     public String name;
-    public double annalCost;
+    public double annualCost;
     public boolean isOutdoors;
     public boolean requiresOthers;
 
@@ -13,11 +13,11 @@ public class Hobby {
 
     public Hobby(String name, double annalCost) {
         this.name = name;
-        this.annalCost = annalCost;
+        this.annualCost = annualCost;
     }
 
-    public Hobby(String name, double annalCost, boolean isOutdoors, boolean requiresOthers) {
-        this(name, annalCost);
+    public Hobby(String name, double annualCost, boolean isOutdoors, boolean requiresOthers) {
+        this(name, annualCost);
         this.isOutdoors = isOutdoors;
         this.requiresOthers = requiresOthers;
     }
@@ -28,9 +28,9 @@ public class Hobby {
 
 
     public String toString() {
-        return "Hobby{" +
+        return "\nHobby{" +
                 "name='" + name + '\'' +
-                ", annalCost=" + annalCost +
+                ", annalCost=" + annualCost +
                 ", isOutdoors=" + isOutdoors +
                 ", requiresOthers=" + requiresOthers +
                 '}';
