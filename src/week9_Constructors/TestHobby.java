@@ -49,13 +49,22 @@ public class TestHobby {
         ArrayList<Hobby> outdoors = new ArrayList<>(hobbies);
         ArrayList<Hobby> requireOthers = new ArrayList<>(hobbies);
         ArrayList<Hobby> highCost = new ArrayList<>(hobbies);
-        outdoors.removeIf(p -> !p.isOutdoors);
+
+        // use p for the lambda variable
+        outdoors.removeIf(p -> p.isOutdoors);
+//        outdoors.removeIf(p -> !p.isOutdoors); // this removes the indoors ones
         requireOthers.removeIf(hobby -> hobby.requiresOthers);
         highCost.removeIf(obj -> obj.annualCost > 500);
         System.out.println(outdoors);
         System.out.println(requireOthers);
         System.out.println(highCost);
 
+        ArrayList<Hobby> lessThan200Indoors = new ArrayList<>(hobbies);
+        lessThan200Indoors.removeIf(p -> p.annualCost > 200 && p.isOutdoors);
+
+        ArrayList<Hobby> outRequire = new ArrayList<>(hobbies);
+        outRequire.removeIf(p -> p.requiresOthers && p.isOutdoors);
+        System.out.println(outRequire);
 
 
 
