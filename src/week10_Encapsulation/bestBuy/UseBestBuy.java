@@ -1,4 +1,4 @@
-package week10_Encapsulation;
+package week10_Encapsulation.bestBuy;
 
 public class UseBestBuy {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package week10_Encapsulation;
+package week10_Encapsulation.bestBuy;
 
 public class BestBuy {
 
