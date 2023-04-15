@@ -34,7 +34,21 @@ public class Mall {
         System.out.println(vendingOne.allDrinks); // prints the whole ArrayList
 
         System.out.println("------------------------");
-        DrinkVending vendingTwo = new DrinkVending(juice);
+        DrinkVending vendingTwo = new DrinkVending(juice); // calls the 2nd constructor
         System.out.println(vendingTwo);
+
+        System.out.println("------------------------");
+
+        ArrayList<Drink> newDrinks = new ArrayList<>(Arrays.asList(
+                new Drink("Orange Juice", 2.39, 5),
+                new Drink("Pomegranate Juice", 3.55, 15),
+                new Drink("Water", 1.99, 20)
+        ));
+        vendingTwo.stock(newDrinks);
+        System.out.println(vendingTwo);
+
+        System.out.println(vendingTwo.vend("Lemonade"));
+        System.out.println(vendingTwo.vend("Coke"));
+        System.out.println(vendingTwo.vend("V8"));
     }
 }
