@@ -14,6 +14,6 @@ public class Drink {
 
 
     public String toString() {
-        return name + " $ " + price + " | Total quantity" + quantity;
+        return name + " | $ " + price + " | Total quantity" + quantity;
     }
 }

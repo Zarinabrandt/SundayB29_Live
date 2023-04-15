@@ -26,5 +26,15 @@ public class Mall {
                 new Drink("V8", 1.99, 10)
         ));
 
+        DrinkVending vendingOne = new DrinkVending();
+        vendingOne.allDrinks.add(new Drink("Redbull", 2.99, 10));
+
+        vendingOne.allDrinks.addAll(soda);
+        System.out.println(vendingOne); // prints the vending in the format we defined in toString
+        System.out.println(vendingOne.allDrinks); // prints the whole ArrayList
+
+        System.out.println("------------------------");
+        DrinkVending vendingTwo = new DrinkVending(juice);
+        System.out.println(vendingTwo);
     }
 }
