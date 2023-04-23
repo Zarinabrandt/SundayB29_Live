@@ -41,6 +41,10 @@ public class DiscordUser {
         System.out.println("Joining "+ discordUrl);
     }
 
+    public static void launch(){
+        System.out.println("Connecting to server");
+    }
+
     @Override
     public String toString() {
         return name + "#" + id + "\nRoles: "+ role + "\nAccount Created: " + createdDate;
